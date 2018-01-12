@@ -169,7 +169,7 @@ router.route('/authenticate')
         }
     })
 });    
-// EXPRESS GET CHECK AUTH and user Role
+// EXPRESS GET with CHECK AUTH and user Role
 router.route('/peopleCheckAuth') 
 .get(passport.authenticate('jwt', {session: false}), function(req, res) {  
     if (req.user.role === 'Client') {
